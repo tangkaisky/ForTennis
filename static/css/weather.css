@@ -1,0 +1,86 @@
+body {
+
+}
+
+div.head {
+	position: absolute;
+	width: 100%;
+	color: white;
+	font-weight: bold;
+}
+
+img.today_pic {
+	float: right;
+	margin-right: 15px;
+}
+
+div.left {
+	float: left;
+	padding: 25px 0px 0px 20px;
+	width: 40%;
+}
+
+p.update {
+	position: absolute;
+	right: 10px;
+}
+
+p.tmpr {
+	font-size: 40pt;
+}
+
+p.state, p.today, p.wind, p.rangetmp {
+	font-size: 12pt;
+	margin-bottom: 0px;
+}
+
+div.footerContent {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+div.footer {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	overflow: hidden;
+}
+
+div.homePage {
+	background-image: url(../img/homePage.png);
+	background-size: 100% 100%;
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+	background-color: #242424;
+	opacity: 0.8;
+}
+
+p.week, p.date {
+	margin-bottom: 0px;
+}
+
+div.layout {
+	position: absolute;
+	background-color: black;
+	opacity: 0.3;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+div.day {
+	float: left;
+	width: 25%;
+}
+
+img.weather_pic {
+	width: 100%;
+	opacity: 0.8;
+}
+

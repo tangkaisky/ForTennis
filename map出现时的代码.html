@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Tennis Shot</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/appoint.css">
+<link rel="stylesheet" type="text/css" href="static/css/general.css">
+<script src='static/js/jquery.min.js'></script>
+<script src='static/js/bootstrap.min.js'></script>
+<script src='static/js/appoint.js'></script>
+<script src='static/js/general.js'></script>
+<script src='static/database/database.js'></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Q0NpEoxxPvqHBqZrKI1WQAZe"></script>
+<!-- <link rel="bookmark" type="image/x-icon" href="favicon.ico" mce_href="favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico" mce_href="favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" mce_href="favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>
+</head> -->
+<body>
+<div class='map' id='locateMap'></div>
+<div class='function_bar'></div>
+<div class='function_bar_up'>
+<div class='write_appoint' id='write_appoint'></div>
+<div class='pageBack'></div>
+</div>
+<div class='extend'></div>
+<div class='layout'></div>
+<div class='appointment'>
+<span>Name:</span> <p id='name'></p>
+<span>Time:</span> <p></p>
+<span>Location:</span> <p></p>
+<span>NTRP:</span> <p></p>
+<span>Infomation:</span> <p></p>
+<span>Appoint People:</span> <p id='appoint_number'></p>
+<div class='button_1' id='aptment_back'>Back</div>
+<div class='button_2' id='aptment_apt'>Appoint</div>
+</div>
+<div class='form'>
+<form method='post' action='#'>
+<div class='form_element'>
+<label for='name'>Name:</label>
+<input id='form_name' name='name' maxlength="15">
+</div>
+<div class='form_element'>
+<label for='time'>Time:</label>
+<input id='form_time' name='time' maxlength="30">
+</div>
+<div class='form_element'>
+<label for='location'>Location:</label>
+<input id='form_location' name='location' maxlength="30">
+</div>
+<div class='form_element'>
+<label for='ntrp'>NTRP:</label>
+<select id='form_ntrp'>
+<option value='1.0'>1.0</option>
+<option value='1.5'>1.5</option>
+<option value='2.0'>2.0</option>
+<option value='2.5'>2.5</option>
+<option value='3.0'>3.0</option>
+<option value='3.5'>3.5</option>
+<option value='4.0'>4.0</option>
+<option value='4.5'>4.5</option>
+<option value='5.0'>5.0</option>
+<option value='>5.0'>>5.0</option>
+</select>
+</div>
+<div class='form_element'>
+<label for='infomation'>Infomation:</label>
+<input id='form_infomation' name='infomation' maxlength="40">
+</div>
+<div class='button_1' id='form_back'>Back</div>
+<div class='button_2' id='form_write'>Write</div>
+</form>
+</div>
+<div class='row'>
+<div class='tips'></div>
+</div>
+<p class='position'></p>
+</body>
+</html>

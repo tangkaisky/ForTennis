@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Tennis Shot</title>
+		<link rel="stylesheet" type="text/css" href="static/css/tennis_shot.css">
+	    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/general.css">
+    	<script src='static/js/jquery.min.js'></script>
+    	<script src='static/js/bootstrap.min.js'></script>
+		<script src='static/js/tennis_shot.js'></script>
+        <script src='static/js/general.js'></script>
+        <script src='static/database/database.js'></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Q0NpEoxxPvqHBqZrKI1WQAZe"></script>
+        <link rel="bookmark" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>   
+        <link rel="icon" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>  
+        <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" mce_href="static/favicon.ico"/>
+	</head>
+	<body>
+		<!-- <div class='background'></div> -->
+        <img class="backgroundimg" src="static/img/bg.png">
+
+		<div class='head'>
+			<p class='title'>Tennis Shot by TK</p>
+		</div>
+        <div class='head_up'>
+            <p class='title'>Tennis Shot</p>
+        </div>
+
+            <!-- 预约信息框 -->
+            <div class='info'>
+                {% for info in info_array %}
+                <div class='appointment'>
+                    <span>Name:</span> <p id='name'>{{ info['name'] }}</p>
+                    <span>Time:</span> <p>{{ info['time'] }}</p>
+                    <span>Location:</span> <p>{{ info['location'] }}</p>
+                    <span>NTRP:</span> <p>{{ info['NTRP'] }}</p>
+                    <span>Information:</span> <p>{{ info['information'] }}</p>
+                    <span>Appoint People:</span> <p id='appoint_number'>{{ info['appoint_people'] }}</p>
+                    <div class='button_1' id='aptment_View'>View</div>
+                    <div class='button_2' id='aptment_apt'>Appoint</div>
+                </div>
+                {% end %}
+        </div>
+
+        <!-- 操作提示 -->
+        <div class='row'>
+            <div class='tips'></div>
+        </div>
+
+        <!-- 按钮选项 -->
+		<div class='choose'></div>
+		<div class='appoint_0'></div>
+		<div class='appoint_1' id='weather_view'></div>
+		<div class='appoint_2' id='write_appoint'></div>
+		<div class='plus'></div>
+
+        <div class='layout'></div>
+       <div class='form'>
+            <form>
+                <div class='form_element'>
+                    <label for='name'>Name:</label>
+                    <input id='form_name' name='name' maxlength="15">
+                </div>
+
+                <div class='form_element'>
+                    <label for='time'>Time:</label>
+                    <input id='form_time' name='time' maxlength="30">
+                </div>
+
+                <div class='form_element'>
+                    <label for='location'>Location:</label>
+                    <input id='form_location' name='location' maxlength="30">
+                </div>
+
+                <div class='form_element'>
+                    <label for='ntrp'>NTRP:</label>
+                    <select id='form_ntrp'>
+                        <option value='1.0'>1.0</option>
+                        <option value='1.5'>1.5</option>
+                        <option value='2.0'>2.0</option>
+                        <option value='2.5'>2.5</option>
+                        <option value='3.0'>3.0</option>
+                        <option value='3.5'>3.5</option>
+                        <option value='4.0'>4.0</option>
+                        <option value='4.5'>4.5</option>
+                        <option value='5.0'>5.0</option>
+                        <option value='>5.0'>>5.0</option>
+                    </select>
+                </div>
+
+                <div class='form_element'>
+                    <label for='infomation'>Infomation:</label>
+                    <input id='form_infomation' name='infomation' maxlength="40">
+                </div>
+
+                <div class='button_1' id='form_back'>Back</div>
+                <div class='button_2' id='form_write'>Write</div>
+            </form>
+        </div>
+
+        <form id='form_view' method='post' action='/map'>
+            <input name='person'>
+        </form>
+	</body>
+</html>
